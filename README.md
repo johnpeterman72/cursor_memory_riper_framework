@@ -4,21 +4,20 @@ A comprehensive, advanced rule set framework combines three powerful AI-assisted
 
 1. **RIPER-5 Mode System**: A structured workflow with five distinct operational modes (Research, Innovate, Plan, Execute, Review) to ensure precise, controlled development.
 
-      Ripper Framework source:
+      Ripper Framework:
+       by [robotlovehuman](https://forum.cursor.com/u/robotlovehuman/summary)
 
-       by robotlovehuman: https://forum.cursor.com/u/robotlovehuman/summary
-
-       Original post: https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516
+      [Original post on the Cursor Forum](https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516)
 
 3. **Memory Bank**: A persistent documentation system that maintains project context between sessions through hierarchical memory files.
 
    Memory bank sources: 
 
-       a. https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab#file-cursor-memory-bank-rules-md
+   [file-cursor-memory-bank-rules-md](https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab#file-cursor-memory-bank-rules-md)
 
-       b. https://github.com/kownacki/ai-assistant/blob/main/.cursorrules
+   [.cursorrules](https://github.com/kownacki/ai-assistant/blob/main/.cursorrules)
    
-4. **Context Management**: A dynamic system for tracking relevance-scored information, personal preferences, and implementation plans.
+5. **Context Management**: A dynamic system for tracking relevance-scored information, personal preferences, and implementation plans.
 
 ## Key Features
 
