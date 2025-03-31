@@ -1,11 +1,48 @@
 # cursor_memory_riper_framework
-This is an advanced rule set for Cursor with a memory bank framework. It is designed to tame Claude 3.7's eagerness and not drive off the road.
 
-Ripper Framework by robotlovehuman: https://forum.cursor.com/u/robotlovehuman/summary
+# Cursor IDE: Enhanced AI Assistant Framework
 
-Originally posted on the Cursor forms: https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516
+A comprehensive, advanced rule set framework combines three powerful AI-assisted coding approaches in Cursor IDE. It is designed to tame Claude 3.7's eagerness and not drive off the road.:
 
-Memory bank sources: 
+1. **RIPER-5 Mode System**: A structured workflow with five distinct operational modes (Research, Innovate, Plan, Execute, Review) to ensure precise, controlled development.
 
-1. https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab#file-cursor-memory-bank-rules-md
-2. https://github.com/kownacki/ai-assistant/blob/main/.cursorrules
+      Ripper Framework source:
+
+       by robotlovehuman: https://forum.cursor.com/u/robotlovehuman/summary
+
+       Original post: https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516
+
+3. **Memory Bank**: A persistent documentation system that maintains project context between sessions through hierarchical memory files.
+
+   Memory bank sources: 
+
+       a. https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab#file-cursor-memory-bank-rules-md
+
+       b. https://github.com/kownacki/ai-assistant/blob/main/.cursorrules
+   
+4. **Context Management**: A dynamic system for tracking relevance-scored information, personal preferences, and implementation plans.
+
+## Key Features
+
+- **Strict Operational Protocol**: Clear mode declarations prevent unintended modifications
+- **Persistent Context**: Never lose important project information between sessions
+- **Structured Documentation**: Standardized templates for all memory files
+- **Implementation Planning**: Thorough planning with clarifying questions and checklists
+- **Automatic Updates**: Memory files stay current through continuous documentation
+- **Project Intelligence**: Learning from patterns and preferences over time
+
+## Getting Started
+
+1. Clone this repository into your Cursor IDE project
+2. Initialize the memory bank using the provided templates
+3. Begin with RESEARCH mode to understand your codebase
+4. Progress through INNOVATE and PLAN modes before implementation
+5. Track progress and maintain documentation as you work
+
+## Documentation
+
+See the full [cursor-rules.md](./cursor-rules.md) file for complete documentation on using this framework.
+
+---
+
+*This framework prevents coding disasters while maintaining perfect continuity across sessions.*
