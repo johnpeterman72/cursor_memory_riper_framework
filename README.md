@@ -18,7 +18,7 @@ flowchart TD
 2.  **RIPER-5 Mode System**: A structured workflow with five distinct operational modes (Research, Innovate, Plan, Execute, Review) to ensure precise, controlled development.
 
       Ripper Framework:
-       by [robotlovehuman](https://forum.cursor.com/u/robotlovehuman/summary)
+       by [robotlovehuman](https://forum.cursor.com/u/robotlovehuman/summary), [github](https://github.com/robotlovehuman)
 
       [Original post on the Cursor Forum](https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516)
 ```mermaid
