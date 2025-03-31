@@ -41,7 +41,9 @@ A comprehensive, advanced rule set framework combines three powerful AI-assisted
 
 ## Documentation
 
-See the full [cursor-rules.md](./cursor-rules.md) file for complete documentation on using this framework.
+See the full [cursor_enhanced_rule_set.md](./cursor_enhanced_rule_set.md) file for complete documentation using this framework.
+
+You can rename the file .cursorrules and add it to your project.
 
 ---
 
