@@ -22,11 +22,13 @@ flowchart TD
 
       [Original post on the Cursor Forum](https://forum.cursor.com/t/i-created-an-amazing-mode-called-riper-5-mode-fixes-claude-3-7-drastically/65516)
 ```mermaid
-flowchart TD
-    RESEARCH[MODE: RESEARCH] --> INNOVATE[MODE: INNOVATE]
-    INNOVATE --> PLAN[MODE: PLAN]
-    PLAN --> EXECUTE[MODE: EXECUTE]
-```  
+flowchart LR
+    R[Research] -->|Cyclical| I[Innovate]
+    I --> P[Plan]
+    P --> E[Execute]
+    E --> Rev[Review]
+    Rev -.-> R
+```
 3. **Memory Bank**: A persistent documentation system that maintains project context between sessions through hierarchical memory files.
 
    Memory bank sources: 
