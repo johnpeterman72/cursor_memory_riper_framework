@@ -1,5 +1,3 @@
-# cursor_memory_riper_framework
-
 # Cursor IDE: Enhanced AI Assistant Framework
 
 A comprehensive, advanced rule set framework combines three powerful AI-assisted coding approaches in Cursor IDE. It is designed to tame Claude 3.7's eagerness and not drive off the road.:
