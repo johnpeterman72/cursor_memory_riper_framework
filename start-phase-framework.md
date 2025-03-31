@@ -128,16 +128,16 @@ project-root/
 │   ├── setup.sh                   # Environment setup script
 │   └── build.sh                   # Build script
 ├── memory-bank/                   # Memory Bank files
-├── README.md                      # Instructions for using memory files
-├── projectbrief.md                # Foundation document defining core requirements and goals
-├── productContext.md              # Why this project exists and problems it solves
-├── systemPatterns.md              # System architecture and key technical decisions
-├── techContext.md                 # Technologies used and development setup
-├── activeContext.md               # Current work focus and next steps
-├── progress.md                    # What works, what's left to build, and known issues
-├── personal-memory.md             # User's personal preferences and details
-├── implementation-plans/          # Saved PLAN mode checklists
-│   └── README.md                  # Instructions for implementation plans
+│   ├── README.md                      # Instructions for using memory files
+│   ├── projectbrief.md                # Foundation document defining core requirements and goals
+│   ├── productContext.md              # Why this project exists and problems it solves
+│   ├── systemPatterns.md              # System architecture and key technical decisions
+│   ├── techContext.md                 # Technologies used and development setup
+│   ├── activeContext.md               # Current work focus and next steps
+│   ├── progress.md                    # What works, what's left to build, and known issues
+│   ├── personal-memory.md             # User's personal preferences and details
+│   └── implementation-plans/          # Saved PLAN mode checklists
+│       └── README.md                  # Instructions for implementation plans
 ├── .cursorrules                   # Cursor rules file
 ├── .gitignore                     # Git ignore file
 ├── README.md                      # Project README
