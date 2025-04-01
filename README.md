@@ -50,18 +50,21 @@ flowchart LR
 
 ## Getting Started
 
-1. Clone this repository into your Cursor IDE project
-2. Initialize the memory bank using the provided templates
-3. Begin with RESEARCH mode to understand your codebase
-4. Progress through INNOVATE and PLAN modes before implementation
-5. Track progress and maintain documentation as you work
+1. Copy this repository into your Cursor IDE project
+2. Add the files to the Cursor rules within your project
+3. Initialize the Start phase and memory bank using the provided templates (in the chat window /start)
+4. Begin with RESEARCH mode to understand your codebase
+5. Progress through INNOVATE and PLAN modes before implementation
+6. Track progress and maintain documentation as you work
 
 ## Documentation
 
 See the full [cursor_enhanced_rule_set.md](./cursor_enhanced_rule_set.md) file for complete documentation using this framework.
 
-You can rename the file .cursorrules and add it to your project.
+You can rename the .cursorrules file and include it in your project, or add the individual files to the project's ruleset.
 
 ---
 
 *This framework prevents coding disasters while maintaining perfect continuity across sessions.*
+*Works without MCP Servers*
+*Works better with MCP Servers*
