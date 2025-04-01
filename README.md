@@ -1,6 +1,6 @@
 # Cursor IDE: Enhanced AI Assistant Framework
 
-A comprehensive, advanced rule set framework combines three powerful AI-assisted coding approaches in Cursor IDE. It is designed to tame Claude 3.7's eagerness and not drive off the road.:
+A robust and advanced rule set framework integrates three powerful AI-assisted coding strategies within the Cursor IDE. This comprehensive system is specifically crafted to temper Claude 3.7's over-enthusiasm, ensuring it stays on track and avoids veering off course.
 
 1. **START PHASE**
  The START phase is a preprocessing phase that runs once at the beginning of a new project or major component. It focuses on project initialization, scaffolding, and setting up the Memory Bank with baseline information. [start-phase-readme.md](./start-phase-readme.md)
