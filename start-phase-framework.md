@@ -1,5 +1,10 @@
+---
+description: START Phase Framework with enforced sequential progression
+globs: 
+alwaysApply: false
+---
 # Cursor IDE: START Phase Framework
-# Version 1.0
+# Version 1.1
 
 This framework defines the START phase for project initialization and scaffolding in the Cursor IDE. It's designed as a preprocessing phase before entering the RIPER workflow.
 
@@ -9,14 +14,23 @@ The START phase is a one-time preprocessing phase that runs at the beginning of 
 
 ```mermaid
 flowchart TD
-    Start[BEGIN START PHASE] --> Req[Requirements Gathering]
-    Req --> Tech[Technology Selection]
-    Tech --> Arch[Architecture Definition]
-    Arch --> Scaffold[Project Scaffolding]
-    Scaffold --> Setup[Environment Setup]
-    Setup --> Memory[Memory Bank Initialization]
+    Start[BEGIN START PHASE] --> Req[Step 1: Requirements Gathering]
+    Req --> Tech[Step 2: Technology Selection]
+    Tech --> Arch[Step 3: Architecture Definition]
+    Arch --> Scaffold[Step 4: Project Scaffolding]
+    Scaffold --> Setup[Step 5: Environment Setup]
+    Setup --> Memory[Step 6: Memory Bank Initialization]
     Memory --> End[TRANSITION TO RIPER]
 ```
+
+## IMPORTANT EXECUTION RULES
+
+1. **Strict Sequential Processing**: Each step MUST be completed in order. DO NOT skip any steps.
+2. **User Confirmation Required**: After completing each step, WAIT for the user's explicit confirmation before proceeding to the next step.
+3. **No Premature Scaffolding**: DO NOT create any actual files or folders until reaching Step 4.
+4. **Complete All Questions**: For each step, ask ALL questions listed under "Key Questions" and document the answers.
+5. **Progress Tracking**: After each step, display the current progress as "[Step X/6 Complete]".
+6. **Transition Commands**: Use the exact transition command "PROCEED TO STEP X" after user confirmation.
 
 ## START PHASE PROCESS
 
@@ -24,73 +38,79 @@ flowchart TD
 - **Purpose**: Project initialization and scaffolding
 - **Permitted**: Requirements gathering, technology selection, architecture definition, project structure setup
 - **Entry Point**: User command "BEGIN START PHASE" or "/start"
-- **Exit Point**: Transition to RESEARCH mode with "ENTER RESEARCH MODE" after setup is complete
+- **Exit Point**: Transition to RESEARCH mode with "ENTER RESEARCH MODE" after all 6 steps are complete
 
-### 1. Requirements Gathering
+### Step 1: Requirements Gathering
 - Collect and document core project requirements
 - Define project scope, goals, and constraints
 - Identify key stakeholders and their needs
 - Document success criteria
-- **Key Questions**:
+- **Key Questions** (ALL must be asked and answered):
   - What problem is this project trying to solve?
   - Who are the primary users or stakeholders?
   - What are the must-have features?
   - What are the nice-to-have features?
   - What are the technical constraints?
   - What is the timeline for completion?
+- **End of Step**: Display "[Step 1/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 2' to continue to Technology Selection"
 
-### 2. Technology Selection
+### Step 2: Technology Selection
 - Assess technology options based on requirements
 - Evaluate frameworks, libraries, and tools
 - Make recommendations with clear rationales
 - Document technology decisions
-- **Key Questions**:
+- **Key Questions** (ALL must be asked and answered):
   - What programming language(s) best fit this project?
   - What frameworks or libraries would be most appropriate?
   - What database technology should be used?
   - What deployment environment is targeted?
   - Are there any specific performance requirements?
   - What testing frameworks should be used?
+- **End of Step**: Display "[Step 2/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 3' to continue to Architecture Definition"
 
-### 3. Architecture Definition
+### Step 3: Architecture Definition
 - Define high-level system architecture
 - Identify key components and their relationships
 - Create initial architectural diagrams
 - Document architectural decisions
-- **Key Questions**:
+- **Key Questions** (ALL must be asked and answered):
   - What architectural pattern is most appropriate?
   - How will the application be structured?
   - What are the key components and their responsibilities?
   - How will data flow through the system?
   - How will the system scale?
   - What security considerations need to be addressed?
+- **End of Step**: Display "[Step 3/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 4' to continue to Project Scaffolding"
 
-### 4. Project Scaffolding
+### Step 4: Project Scaffolding
+- NO ACTUAL FILES are created until this step
 - Set up initial folder structure
 - Create configuration files
 - Initialize version control
 - Set up package management
 - Create initial README and documentation
-- **Key Actions**:
-  - Create the basic folder structure
-  - Initialize git repository
-  - Set up package manager (npm, pip, etc.)
-  - Create initial configuration files
-  - Set up basic build process
+- **Key Actions** (ALL must be confirmed):
+  - Present the planned folder structure for user approval
+  - Confirm git repository initialization method
+  - Confirm package manager setup (npm, pip, etc.)
+  - List all configuration files to be created
+  - Describe build process setup
+- **End of Step**: Display "[Step 4/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 5' to continue to Environment Setup"
 
-### 5. Environment Setup
+### Step 5: Environment Setup
 - Configure development environment
 - Set up testing framework
 - Establish CI/CD pipeline configuration
 - Define deployment strategy
-- **Key Actions**:
-  - Set up local development environment
-  - Configure testing framework
-  - Create initial test cases
-  - Define CI/CD pipeline
+- **Key Actions** (ALL must be confirmed):
+  - Present local development environment setup plan
+  - Describe testing framework configuration
+  - List initial test cases to be created
+  - Outline CI/CD pipeline configuration
   - Document deployment process
+- **End of Step**: Display "[Step 5/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 6' to continue to Memory Bank Initialization"
 
-### 6. Memory Bank Initialization
+### Step 6: Memory Bank Initialization
 - Create and populate all core memory files:
   - projectbrief.md
   - productContext.md
@@ -99,11 +119,13 @@ flowchart TD
   - activeContext.md
   - progress.md
 - Establish initial .cursorrules file
-- **Key Actions**:
-  - Create memory-bank directory
-  - Create and populate all core memory files
+- **Key Actions** (ALL must be confirmed):
+  - Present the content for each memory file for user review
+  - Confirm memory-bank directory structure
+  - Verify content to be included in .cursorrules file
   - Document initial state in activeContext.md
-  - Set up progress.md with initial tasks
+  - Confirm progress.md with initial tasks
+- **End of Step**: Display "[START PHASE COMPLETE]" and prompt user with "Type 'ENTER RESEARCH MODE' to transition to the RIPER workflow"
 
 ## PROJECT TEMPLATES
 
@@ -251,38 +273,33 @@ project-root/
 *This document captures the high-level architecture of the system.*
 ```
 
-## TRANSITION TO RIPER WORKFLOW
-
-Once the START phase is complete, you should transition to the RIPER workflow by:
-
-1. Ensuring all memory files are populated with initial information
-2. Documenting the current state in activeContext.md
-3. Setting up initial tasks in progress.md
-4. Transitioning to RESEARCH mode with "ENTER RESEARCH MODE" command
-
-The START phase is designed to be run once at the beginning of a project, while the RIPER workflow is cyclical and continues throughout the project lifecycle.
-
-```mermaid
-flowchart LR
-    Start[START Phase] -->|One-time| R[Research]
-    R -->|Cyclical| I[Innovate]
-    I --> P[Plan]
-    P --> E[Execute]
-    E --> Rev[Review]
-    Rev -.-> R
-```
-
 ## DELIVERABLES CHECKLIST
 
 At the end of the START phase, ensure the following are complete:
 
-- [ ] Project requirements documented
-- [ ] Technology stack selected and documented
-- [ ] System architecture defined
-- [ ] Project scaffold created
-- [ ] Development environment configured
-- [ ] Memory Bank initialized with all core files
+- [ ] Project requirements documented (Step 1)
+- [ ] Technology stack selected and documented (Step 2)
+- [ ] System architecture defined (Step 3)
+- [ ] Project scaffold created (Step 4)
+- [ ] Development environment configured (Step 5)
+- [ ] Memory Bank initialized with all core files (Step 6)
 - [ ] Initial tasks documented in progress.md
 - [ ] .cursorrules file created with initial patterns
 
-Once all items are checked, transition to the RIPER workflow by informing the user by displaying "START PHASE HAS BEEN SUCCESSFUL." Then tell the User they must type the "ENTER RESEARCH MODE" command to move into the research mode of the Riper workflow
+## ENFORCEMENT MECHANISMS
+
+To ensure proper execution, the following mechanisms are mandatory:
+
+1. **Explicit Step Transitions**: Each step must end with a specific transition command
+2. **Numbered Steps**: All steps are explicitly numbered (Step X/6) to track progress
+3. **Complete All Questions**: Every question in "Key Questions" must be asked and answered
+4. **File Creation Point**: No files or folders are created until Step 4
+5. **Visual Progress**: Progress must be visually indicated after each step
+6. **Success Declaration**: Upon completion, display "START PHASE HAS BEEN SUCCESSFUL" followed by instructions to type "ENTER RESEARCH MODE"
+
+Once all items are checked, transition to the RIPER workflow by informing the user by displaying:
+
+```
+START PHASE HAS BEEN SUCCESSFUL.
+Type "ENTER RESEARCH MODE" to move into the Research mode of the RIPER workflow.
+```
