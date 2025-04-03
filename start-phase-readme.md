@@ -17,15 +17,20 @@ The START Phase provides a systematic process for initializing new projects or m
 
 ## Getting Started
 
-1. Copr thestart-phase-framework.md to your Cursor IDE project
+1. Copy the start-phase-framework.md to your Cursor IDE project and add it to the Cursor rules (make sure you also add the cursor_enhanced_rule_set.md to the Cursor rules as well)
 2. Begin with the START phase using the `/start` command in the AI agent window
 3. Follow the structured process for project initialization
 4. Complete the deliverables checklist
-5. Transition to the RIPER workflow for ongoing development
+5. Transition to the RIPER workflow for ongoing development by typing the command "ENTER RESEARCH MODE"
+
+## Custom Modifications
+1. If you work in a standard technology stack, you can edit the [start-phase-framework.md](./start-phase-framework.md), file to include these files and references
+2. You can easily customize the folder structure, departing from the Standard Project Scaffold Template in [start-phase-framework.md](./start-phase-framework.md), by editing the file before you run the start command.
+
 
 ## Related Framework
 
-This framework is designed to work with the [Enhanced AI Assistant Framework](./README.md) which provides the RIPER workflow for ongoing development after initialization.
+This framework is designed to work with the [Enhanced AI Assistant Framework](./README.md), which provides the RIPER workflow for ongoing development after initialization.
 
 ## Documentation
 
