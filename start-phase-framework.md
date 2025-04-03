@@ -4,7 +4,7 @@ globs:
 alwaysApply: false
 ---
 # Cursor IDE: START Phase Framework
-# Version 1.1
+# Version 1.2
 
 This framework defines the START phase for project initialization and scaffolding in the Cursor IDE. It's designed as a preprocessing phase before entering the RIPER workflow.
 
@@ -15,20 +15,24 @@ The START phase is a one-time preprocessing phase that runs at the beginning of 
 ```mermaid
 flowchart TD
     Start[BEGIN START PHASE] --> Req[Step 1: Requirements Gathering]
-    Req --> Tech[Step 2: Technology Selection]
+    Req --> Decision{Recommendations?}
+    Decision -->|Yes| AutoRecs[AI Recommendations]
+    Decision -->|No| Manual[Manual Process]
+    AutoRecs --> Scaffold[Step 4: Project Scaffolding]
+    Manual --> Tech[Step 2: Technology Selection]
     Tech --> Arch[Step 3: Architecture Definition]
-    Arch --> Scaffold[Step 4: Project Scaffolding]
+    Arch --> Scaffold
     Scaffold --> Setup[Step 5: Environment Setup]
     Setup --> Memory[Step 6: Memory Bank Initialization]
     Memory --> End[TRANSITION TO RIPER]
 ```
 
-## IMPORTANT EXECUTION RULES
+## IMPORTANT EXECUTION INSTRUCTIONS
 
 1. **Strict Sequential Processing**: Each step MUST be completed in order. DO NOT skip any steps.
-2. **User Confirmation Required**: After completing each step, WAIT for the user's explicit confirmation before proceeding to the next step.
-3. **No Premature Scaffolding**: DO NOT create any actual files or folders until reaching Step 4.
-4. **Complete All Questions**: For each step, ask ALL questions listed under "Key Questions" and document the answers.
+2. **User Confirmation Required**: After completing each step, WAIT for the user's explicit confirmation before proceeding.
+3. **File Creation Instructions**: When reaching Step 4, ACTIVELY CREATE the defined folders and files.
+4. **AI Recommendations Option**: After Step 1, offer the user an option to receive AI recommendations for technology and architecture.
 5. **Progress Tracking**: After each step, display the current progress as "[Step X/6 Complete]".
 6. **Transition Commands**: Use the exact transition command "PROCEED TO STEP X" after user confirmation.
 
@@ -38,7 +42,7 @@ flowchart TD
 - **Purpose**: Project initialization and scaffolding
 - **Permitted**: Requirements gathering, technology selection, architecture definition, project structure setup
 - **Entry Point**: User command "BEGIN START PHASE" or "/start"
-- **Exit Point**: Transition to RESEARCH mode with "ENTER RESEARCH MODE" after all 6 steps are complete
+- **Exit Point**: Transition to RESEARCH mode with "ENTER RESEARCH MODE" after all steps are complete
 
 ### Step 1: Requirements Gathering
 - Collect and document core project requirements
@@ -52,7 +56,21 @@ flowchart TD
   - What are the nice-to-have features?
   - What are the technical constraints?
   - What is the timeline for completion?
-- **End of Step**: Display "[Step 1/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 2' to continue to Technology Selection"
+- **End of Step**: Display "[Step 1/6 Complete]" and provide user with two options:
+  1. Type "AI RECOMMEND" to have AI provide intelligent recommendations for technology and architecture (skips to Step 4)
+  2. Type "PROCEED TO STEP 2" to manually continue through technology selection
+
+### AI Recommendation Option
+- If user chooses "AI RECOMMEND":
+  - Analyze requirements gathered in Step 1
+  - Generate intelligent recommendations for:
+    - Programming languages and frameworks
+    - Database technologies
+    - Architecture patterns
+    - Project structure
+  - Present comprehensive recommendations to user
+  - Ask for user confirmation: "Are these recommendations acceptable? Type 'ACCEPT RECOMMENDATIONS' to proceed to Step 4"
+  - Upon acceptance, document decisions in the memory bank and PROCEED TO STEP 4
 
 ### Step 2: Technology Selection
 - Assess technology options based on requirements
@@ -83,18 +101,19 @@ flowchart TD
 - **End of Step**: Display "[Step 3/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 4' to continue to Project Scaffolding"
 
 ### Step 4: Project Scaffolding
-- NO ACTUAL FILES are created until this step
-- Set up initial folder structure
-- Create configuration files
-- Initialize version control
-- Set up package management
-- Create initial README and documentation
-- **Key Actions** (ALL must be confirmed):
-  - Present the planned folder structure for user approval
-  - Confirm git repository initialization method
-  - Confirm package manager setup (npm, pip, etc.)
-  - List all configuration files to be created
-  - Describe build process setup
+- SET UP INITIAL FOLDER STRUCTURE AND CREATE FILES NOW
+- **Actions to Execute** (these are not suggestions but commands to be executed):
+  - Create project root directory
+  - Generate all subdirectories following the defined structure
+  - Create initial configuration files
+  - Initialize git repository (if specified)
+  - Set up package management
+  - CREATE initial README and documentation files
+- **Files to Create**:
+  - Directory structure exactly as specified in the template
+  - Configuration files (.gitignore, package.json, etc.)
+  - README.md with project information
+  - License file if specified
 - **End of Step**: Display "[Step 4/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 5' to continue to Environment Setup"
 
 ### Step 5: Environment Setup
@@ -102,29 +121,24 @@ flowchart TD
 - Set up testing framework
 - Establish CI/CD pipeline configuration
 - Define deployment strategy
-- **Key Actions** (ALL must be confirmed):
-  - Present local development environment setup plan
-  - Describe testing framework configuration
-  - List initial test cases to be created
-  - Outline CI/CD pipeline configuration
-  - Document deployment process
+- **Actions to Execute**:
+  - CREATE all environment configuration files
+  - GENERATE initial test files
+  - CREATE CI/CD configuration files
+  - DOCUMENT deployment process in appropriate files
 - **End of Step**: Display "[Step 5/6 Complete]" and prompt user with "Type 'PROCEED TO STEP 6' to continue to Memory Bank Initialization"
 
 ### Step 6: Memory Bank Initialization
-- Create and populate all core memory files:
-  - projectbrief.md
-  - productContext.md
-  - systemPatterns.md
-  - techContext.md
-  - activeContext.md
-  - progress.md
-- Establish initial .cursorrules file
-- **Key Actions** (ALL must be confirmed):
-  - Present the content for each memory file for user review
-  - Confirm memory-bank directory structure
-  - Verify content to be included in .cursorrules file
-  - Document initial state in activeContext.md
-  - Confirm progress.md with initial tasks
+- **Actions to Execute**:
+  - CREATE memory-bank directory if not already created
+  - GENERATE all core memory files with content:
+    - projectbrief.md
+    - productContext.md
+    - systemPatterns.md
+    - techContext.md
+    - activeContext.md
+    - progress.md
+  - ESTABLISH initial .cursorrules file
 - **End of Step**: Display "[START PHASE COMPLETE]" and prompt user with "Type 'ENTER RESEARCH MODE' to transition to the RIPER workflow"
 
 ## PROJECT TEMPLATES
@@ -278,26 +292,25 @@ project-root/
 At the end of the START phase, ensure the following are complete:
 
 - [ ] Project requirements documented (Step 1)
-- [ ] Technology stack selected and documented (Step 2)
-- [ ] System architecture defined (Step 3)
+- [ ] Technology stack selected and documented (Step 2 or AI Recommendations)
+- [ ] System architecture defined (Step 3 or AI Recommendations)
 - [ ] Project scaffold created (Step 4)
 - [ ] Development environment configured (Step 5)
 - [ ] Memory Bank initialized with all core files (Step 6)
 - [ ] Initial tasks documented in progress.md
 - [ ] .cursorrules file created with initial patterns
 
-## ENFORCEMENT MECHANISMS
+## EXECUTION COMMANDS
 
-To ensure proper execution, the following mechanisms are mandatory:
+The following explicit commands must be executed:
 
-1. **Explicit Step Transitions**: Each step must end with a specific transition command
-2. **Numbered Steps**: All steps are explicitly numbered (Step X/6) to track progress
-3. **Complete All Questions**: Every question in "Key Questions" must be asked and answered
-4. **File Creation Point**: No files or folders are created until Step 4
-5. **Visual Progress**: Progress must be visually indicated after each step
-6. **Success Declaration**: Upon completion, display "START PHASE HAS BEEN SUCCESSFUL" followed by instructions to type "ENTER RESEARCH MODE"
+1. **At Step 4**: CREATE ALL FOLDERS AND FILES according to the template structure.
+2. **At Step 5**: CREATE ENVIRONMENT FILES AND TEST FILES.
+3. **At Step 6**: CREATE MEMORY BANK FILES with detailed content based on previous steps.
 
-Once all items are checked, transition to the RIPER workflow by informing the user by displaying:
+## SUCCESS NOTIFICATION
+
+Once all items are checked, transition to the RIPER workflow by displaying:
 
 ```
 START PHASE HAS BEEN SUCCESSFUL.
