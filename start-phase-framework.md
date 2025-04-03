@@ -1,7 +1,7 @@
 # Cursor IDE: START Phase Framework
 # Version 1.0
 
-This framework defines the START phase for project initialization and scaffolding in Cursor IDE. It's designed to be used as a preprocessing phase before entering the RIPER workflow.
+This framework defines the START phase for project initialization and scaffolding in the Cursor IDE. It's designed as a preprocessing phase before entering the RIPER workflow.
 
 ## START PHASE OVERVIEW
 
@@ -285,4 +285,4 @@ At the end of the START phase, ensure the following are complete:
 - [ ] Initial tasks documented in progress.md
 - [ ] .cursorrules file created with initial patterns
 
-Once all items are checked, transition to the RIPER workflow.
+Once all items are checked, transition to the RIPER workflow by informing the user by displaying "START PHASE HAS BEEN SUCCESSFUL." Then tell the User they must type the "ENTER RESEARCH MODE" command to move into the research mode of the Riper workflow
