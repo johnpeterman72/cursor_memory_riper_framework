@@ -4,7 +4,7 @@ globs:
 alwaysApply: false
 ---
 # Cursor IDE: START Phase Framework
-# Version 1.2
+# Version 1.3
 
 This framework defines the START phase for project initialization and scaffolding in the Cursor IDE. It's designed as a preprocessing phase before entering the RIPER workflow.
 
@@ -14,7 +14,8 @@ The START phase is a one-time preprocessing phase that runs at the beginning of 
 
 ```mermaid
 flowchart TD
-    Start[BEGIN START PHASE] --> Req[Step 1: Requirements Gathering]
+    Start[BEGIN START PHASE] --> Analyze[Project Name Analysis]
+    Analyze --> Req[Step 1: Requirements Gathering]
     Req --> Decision{Recommendations?}
     Decision -->|Yes| AutoRecs[AI Recommendations]
     Decision -->|No| Manual[Manual Process]
@@ -29,26 +30,43 @@ flowchart TD
 
 ## IMPORTANT EXECUTION INSTRUCTIONS
 
-1. **Strict Sequential Processing**: Each step MUST be completed in order. DO NOT skip any steps.
-2. **User Confirmation Required**: After completing each step, WAIT for the user's explicit confirmation before proceeding.
-3. **File Creation Instructions**: When reaching Step 4, ACTIVELY CREATE the defined folders and files.
-4. **AI Recommendations Option**: After Step 1, offer the user an option to receive AI recommendations for technology and architecture.
-5. **Progress Tracking**: After each step, display the current progress as "[Step X/6 Complete]".
-6. **Transition Commands**: Use the exact transition command "PROCEED TO STEP X" after user confirmation.
+1. **Project Analysis**: Begin by analyzing the project name and folder structure to make intelligent assumptions.
+2. **Strict Sequential Processing**: Each step MUST be completed in order. DO NOT skip any steps.
+3. **User Confirmation Required**: After completing each step, WAIT for the user's explicit confirmation before proceeding.
+4. **File Creation Instructions**: When reaching Step 4, ACTIVELY CREATE the defined folders and files.
+5. **AI Recommendations Option**: After Step 1, offer the user an option to receive AI recommendations for technology and architecture.
+6. **Progress Tracking**: After each step, display the current progress as "[Step X/6 Complete]".
+7. **Transition Commands**: Use the exact transition command "PROCEED TO STEP X" after user confirmation.
 
 ## START PHASE PROCESS
 
 [PHASE: START]
 - **Purpose**: Project initialization and scaffolding
-- **Permitted**: Requirements gathering, technology selection, architecture definition, project structure setup
+- **Permitted**: Project name analysis, requirements gathering, technology selection, architecture definition, project structure setup
 - **Entry Point**: User command "BEGIN START PHASE" or "/start"
 - **Exit Point**: Transition to RESEARCH mode with "ENTER RESEARCH MODE" after all steps are complete
+
+### Project Name Analysis
+- Examine the project name and folder structure
+- Make intelligent assumptions about project type
+- Identify potential technology stack based on naming conventions
+- Suggest architecture patterns that might be appropriate
+- **Key Actions**:
+  - Analyze project name for keywords (e.g., "api", "web", "mobile", "ml", "data")
+  - Check for language indicators (e.g., "py", "js", "react", "node")
+  - Look for domain-specific terms (e.g., "finance", "health", "ecommerce")
+  - Present assumptions to user for confirmation or correction
+- **End of Analysis**: Display "Project Analysis Complete" and proceed to Step 1
 
 ### Step 1: Requirements Gathering
 - Collect and document core project requirements
 - Define project scope, goals, and constraints
 - Identify key stakeholders and their needs
 - Document success criteria
+- **Preliminary Information** (Present before questions):
+  - Share project analysis findings: "Based on the project name analysis, I believe this might be [project type]. Is this correct?"
+  - Provide initial assumptions about requirements
+  - Ask if the user wants to refine these assumptions
 - **Key Questions** (ALL must be asked and answered):
   - What problem is this project trying to solve?
   - Who are the primary users or stakeholders?
@@ -62,13 +80,16 @@ flowchart TD
 
 ### AI Recommendation Option
 - If user chooses "AI RECOMMEND":
+  - Consider initial project name analysis findings
   - Analyze requirements gathered in Step 1
   - Generate intelligent recommendations for:
     - Programming languages and frameworks
     - Database technologies
     - Architecture patterns
     - Project structure
-  - Present comprehensive recommendations to user
+  - Present comprehensive recommendations to user with clear rationale 
+  - Include references to project name analysis where relevant
+  - Explain how recommendations align with initial assumptions
   - Ask for user confirmation: "Are these recommendations acceptable? Type 'ACCEPT RECOMMENDATIONS' to proceed to Step 4"
   - Upon acceptance, document decisions in the memory bank and PROCEED TO STEP 4
 
@@ -291,6 +312,7 @@ project-root/
 
 At the end of the START phase, ensure the following are complete:
 
+- [ ] Project name analysis performed and documented
 - [ ] Project requirements documented (Step 1)
 - [ ] Technology stack selected and documented (Step 2 or AI Recommendations)
 - [ ] System architecture defined (Step 3 or AI Recommendations)
