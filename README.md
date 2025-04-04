@@ -53,7 +53,7 @@ flowchart LR
 - **Project Intelligence**: Learning from patterns and preferences over time
 
 ## Getting Started
-
+[Watch this video to get started](https://youtu.be/owX1tuRKVFk)
 1. Copy this repository into your Cursor IDE project
 2. Add the files to the Cursor rules within your project
 3. Initialize the Start phase using the provided templates (in the chat window type `/start`)
@@ -93,3 +93,7 @@ You can rename the .cursorrules file and include it in your project, or add the 
 *This framework prevents coding disasters while maintaining perfect continuity across sessions.*  
 *Works without MCP Servers*  
 *Works better with MCP Servers*
+
+
+
+
