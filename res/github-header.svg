@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#1e1e2e" />
+  
+  <!-- Top accent bar -->
+  <rect width="1200" height="8" fill="#7b68ee" />
+  
+  <!-- Main title -->
+  <text x="600" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    CURSOR IDE: ENHANCED AI ASSISTANT FRAMEWORK
+  </text>
+  
+  <!-- Subtitle - moved up to avoid overlap -->
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="16" fill="#a6adc8" text-anchor="middle">
+    Structured AI-assisted development with project continuity
+  </text>
+  
+  <!-- START Phase flow chart - centered horizontally and vertically -->
+  <g transform="translate(350, 200)">
+    <!-- START title -->
+    <text x="0" y="-35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7b68ee" text-anchor="middle">
+      START PHASE
+    </text>
+    
+    <!-- Boxes and arrows -->
+    <rect x="-150" y="0" width="60" height="30" rx="5" ry="5" fill="#313244" stroke="#7b68ee" stroke-width="2" />
+    <text x="-120" y="20" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Analyze</text>
+    
+    <line x1="-90" y1="15" x2="-70" y2="15" stroke="#7b68ee" stroke-width="2" />
+    <polygon points="-70,15 -75,12 -75,18" fill="#7b68ee" />
+    
+    <rect x="-70" y="0" width="60" height="30" rx="5" ry="5" fill="#313244" stroke="#7b68ee" stroke-width="2" />
+    <text x="-40" y="20" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Gather</text>
+    
+    <line x1="-10" y1="15" x2="10" y2="15" stroke="#7b68ee" stroke-width="2" />
+    <polygon points="10,15 5,12 5,18" fill="#7b68ee" />
+    
+    <rect x="10" y="0" width="60" height="30" rx="5" ry="5" fill="#313244" stroke="#7b68ee" stroke-width="2" />
+    <text x="40" y="20" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Scaffold</text>
+    
+    <line x1="70" y1="15" x2="90" y2="15" stroke="#7b68ee" stroke-width="2" />
+    <polygon points="90,15 85,12 85,18" fill="#7b68ee" />
+    
+    <rect x="90" y="0" width="60" height="30" rx="5" ry="5" fill="#313244" stroke="#7b68ee" stroke-width="2" />
+    <text x="120" y="20" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Memory</text>
+  </g>
+  
+  <!-- RIPER workflow - centered horizontally and vertically -->
+  <g transform="translate(850, 200)">
+    <!-- Circular workflow -->
+    <circle cx="0" cy="15" r="90" fill="none" stroke="#f38ba8" stroke-width="2" stroke-dasharray="5,5" />
+    
+    <!-- RIPER title - moved inside the circle -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f38ba8" text-anchor="middle">
+      RIPER
+    </text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f38ba8" text-anchor="middle">
+      WORKFLOW
+    </text>
+    
+    <!-- Mode boxes -->
+    <rect x="-25" y="-75" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="0" y="-58" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Research</text>
+    
+    <rect x="65" y="-25" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="90" y="-8" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Innovate</text>
+    
+    <rect x="65" y="55" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="90" y="72" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Plan</text>
+    
+    <rect x="-25" y="105" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="0" y="122" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Execute</text>
+    
+    <rect x="-115" y="55" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="-90" y="72" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Review</text>
+    
+    <rect x="-115" y="-25" width="50" height="25" rx="5" ry="5" fill="#313244" stroke="#f38ba8" stroke-width="2" />
+    <text x="-90" y="-8" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">Memory</text>
+  </g>
+  
+  <!-- Connection between START and RIPER -->
+  <line x1="520" y1="215" x2="730" y2="215" stroke="#a6adc8" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="730,215 725,212 725,218" fill="#a6adc8" />
+  
+  <!-- Code pattern background elements - repositioned -->
+  <g opacity="0.1">
+    <text x="100" y="320" font-family="monospace" font-size="12" fill="#f38ba8">.cursorrules</text>
+    <text x="300" y="290" font-family="monospace" font-size="12" fill="#7b68ee">memory-bank/</text>
+    <text x="900" y="310" font-family="monospace" font-size="12" fill="#7b68ee">activeContext.md</text>
+    <text x="500" y="330" font-family="monospace" font-size="12" fill="#f38ba8">ENTER RESEARCH MODE</text>
+    <text x="700" y="300" font-family="monospace" font-size="12" fill="#7b68ee">projectbrief.md</text>
+  </g>
+  
+  <!-- Bottom tagline - moved down for spacing -->
+  <text x="600" y="365" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Perfect continuity across sessions | Structured workflows | Intelligent project scaffolding
+  </text>
+</svg>
