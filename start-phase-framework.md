@@ -1,7 +1,7 @@
 ---
 description: START Phase Framework with enforced sequential progression
 globs: 
-alwaysApply: false
+alwaysApply: ture
 ---
 # Cursor IDE: START Phase Framework
 # Version 1.3
