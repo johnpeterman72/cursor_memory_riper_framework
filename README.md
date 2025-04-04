@@ -1,3 +1,4 @@
+![Cursor IDE Enhanced AI Assistant Framework](res/github-header.svg)
 # Cursor IDE: Enhanced AI Assistant Framework
 
 A robust and advanced rule set framework integrates three powerful AI-assisted coding strategies within the Cursor IDE. This comprehensive system is specifically crafted to temper Claude 3.7's over-enthusiasm, ensuring it stays on track and avoids veering off course.
