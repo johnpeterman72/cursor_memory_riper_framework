@@ -1,0 +1,190 @@
+---
+title: "Cursor RIPER Framework - Project Intelligence - Preferences"
+version: "2.0"
+date_created: "2024-04-04"
+last_updated: "2024-04-04"
+framework_component: "intelligence"
+priority: "medium"
+scope: "development_maintenance"
+---
+
+# Cursor RIPER Framework - Project Intelligence - Preferences
+# Version 2.0
+
+## AI PROCESSING INSTRUCTIONS
+This file documents user preferences observed during project interactions. As an AI assistant, you MUST:
+- Update this file as you observe new preferences
+- Apply these preferences consistently in all interactions
+- Prioritize explicit preferences over inferred ones
+- Use these preferences to guide your responses
+- Never contradict explicitly stated preferences
+
+## USER COMMUNICATION PREFERENCES
+
+### Communication Style
+```
+[This section will be populated as communication preferences are observed]
+
+Example format:
+- Preference: [PREFERENCE_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Observed in: [CONVERSATION_REFERENCES]
+  - How to apply: [APPLICATION_GUIDANCE]
+```
+
+### Response Format
+```
+[This section will be populated as response format preferences are observed]
+
+Example format:
+- Format: [FORMAT_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - When to use: [USAGE_CONTEXT]
+  - Structure: [FORMAT_STRUCTURE]
+  - Example: [FORMAT_EXAMPLE]
+```
+
+### Explanation Level
+```
+[This section will be populated as explanation preferences are observed]
+
+Example format:
+- Level: [LEVEL_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - When to use: [USAGE_CONTEXT]
+  - Characteristics: [LEVEL_CHARACTERISTICS]
+  - Example: [EXAMPLE]
+```
+
+## CODE STYLE PREFERENCES
+
+### Formatting Conventions
+```
+[This section will be populated as code formatting preferences are observed]
+
+Example format:
+- Convention: [CONVENTION_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Applied to: [LANGUAGE_OR_FILE_TYPE]
+  - Rules: [SPECIFIC_RULES]
+  - Example: [CODE_EXAMPLE]
+```
+
+### Naming Conventions
+```
+[This section will be populated as naming preferences are observed]
+
+Example format:
+- Convention: [CONVENTION_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Applied to: [ELEMENT_TYPE]
+  - Format: [FORMAT_DESCRIPTION]
+  - Examples: [NAMING_EXAMPLES]
+```
+
+### Documentation Style
+```
+[This section will be populated as documentation preferences are observed]
+
+Example format:
+- Style: [STYLE_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Applied to: [DOCUMENTATION_TYPE]
+  - Format: [FORMAT_DESCRIPTION]
+  - Example: [DOCUMENTATION_EXAMPLE]
+```
+
+## WORKFLOW PREFERENCES
+
+### Development Process
+```
+[This section will be populated as development process preferences are observed]
+
+Example format:
+- Process: [PROCESS_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Steps: [PROCESS_STEPS]
+  - User preference: [PREFERENCE_DETAILS]
+  - How to support: [SUPPORT_APPROACH]
+```
+
+### Review Process
+```
+[This section will be populated as review process preferences are observed]
+
+Example format:
+- Process: [PROCESS_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Steps: [PROCESS_STEPS]
+  - User preference: [PREFERENCE_DETAILS]
+  - How to support: [SUPPORT_APPROACH]
+```
+
+### Planning Approach
+```
+[This section will be populated as planning preferences are observed]
+
+Example format:
+- Approach: [APPROACH_NAME]
+  - Description: [DETAILED_DESCRIPTION]
+  - Characteristics: [APPROACH_CHARACTERISTICS]
+  - User preference: [PREFERENCE_DETAILS]
+  - How to support: [SUPPORT_APPROACH]
+```
+
+## TECHNOLOGY PREFERENCES
+
+### Languages and Frameworks
+```
+[This section will be populated as technology preferences are observed]
+
+Example format:
+- Technology: [TECHNOLOGY_NAME]
+  - User preference: [PREFERENCE_LEVEL]
+  - Observed in: [CONTEXT_OBSERVED]
+  - Expertise level: [EXPERTISE_ASSESSMENT]
+  - Notes: [ADDITIONAL_NOTES]
+```
+
+### Tools and Environments
+```
+[This section will be populated as tool preferences are observed]
+
+Example format:
+- Tool: [TOOL_NAME]
+  - User preference: [PREFERENCE_LEVEL]
+  - Use cases: [HOW_USED]
+  - Integration: [INTEGRATION_DETAILS]
+  - Notes: [ADDITIONAL_NOTES]
+```
+
+### Architecture Preferences
+```
+[This section will be populated as architecture preferences are observed]
+
+Example format:
+- Pattern: [PATTERN_NAME]
+  - User preference: [PREFERENCE_LEVEL]
+  - Applied to: [CONTEXT_USED]
+  - Rationale: [USER_RATIONALE]
+  - Notes: [ADDITIONAL_NOTES]
+```
+
+## PREFERENCE DOCUMENTATION PROCESS
+
+To document a new preference:
+1. Observe recurring preference in user interactions
+2. Verify the preference through multiple observations or explicit statements
+3. Document the preference in the appropriate section
+4. Include context where the preference was observed
+5. Provide guidance on how to apply the preference
+
+When applying preferences:
+1. Check this file for relevant preferences before responding
+2. Prioritize explicit, documented preferences
+3. Apply preferences consistently across interactions
+4. Update preference documentation as new information emerges
+
+---
+
+*This file documents user preferences observed during project interactions. It serves as a guide for personalized assistance.*
