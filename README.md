@@ -1,7 +1,9 @@
+Please note: The new project is [CursorRiper](https://github.com/johnpeterman72/CursorRIPER). This repo will not be maintained. 
+
 ![Cursor IDE Enhanced AI Assistant Framework](res/github-header.svg)
 # Cursor IDE: Enhanced AI Assistant Framework
 
-A robust and advanced rule set framework integrates three powerful AI-assisted coding strategies within the Cursor IDE. This comprehensive system is specifically crafted to temper Claude 3.7's over-enthusiasm, ensuring it stays on track and avoids veering off course.
+A robust, advanced rule set framework integrates three powerful AI-assisted coding strategies within the Cursor IDE. This comprehensive system is designed to temper Claude 3.7's over-enthusiasm, ensuring it stays on track and avoids veering off course.
 
 ## Core Components
 
@@ -87,7 +89,7 @@ The framework provides a seamless integration between the START phase and the RI
 ## Documentation
 
 See the full [cursor_enhanced_rule_set.md](./cursor_enhanced_rule_set.md) file for complete documentation using this framework.
-You can rename the .cursorrules file and include it in your project, or add the individual files to the project's ruleset.
+You can rename the .cursorrules file and include it in your project or add the individual files to the project's ruleset.
 
 ---
 
