@@ -1,4 +1,4 @@
-Please note: The new project is [CursorRiper](https://github.com/johnpeterman72/CursorRIPER). This repo will NOT be maintained. 
+Please note: The current projects are [CursorRiper](https://github.com/johnpeterman72/CursorRIPER) and [CursorRIPER.Sigma](https://github.com/johnpeterman72/CursorRIPER.sigma). This repo will NOT be maintained. 
 
 ![Cursor IDE Enhanced AI Assistant Framework](res/github-header.svg)
 # Cursor IDE: Enhanced AI Assistant Framework
